@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>أجيال كلين | للتنظيف ومكافحة الحشرات</title>
+
+  <meta name="description" content="أجيال كلين لخدمات التنظيف ومكافحة الحشرات بالمنطقة الشرقية. خدمة احترافية وسريعة للمنازل والمنشآت.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f7fafc;
+      color: #12365a;
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ===== الشريط العلوي ===== */
+
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 3px 15px rgba(0,0,0,.08);
+    }
+
+    .navbar {
+      min-height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #075ca8;
+      font-weight: bold;
+    }
+
+    .logo-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #087bc1, #2da83d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    }
+
+    .logo-text {
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    .logo-text small {
+      display: block;
+      color: #24953b;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #12365a;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #1fa13a;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 30px;
+      padding: 11px 20px;
+      font-weight: bold;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .whatsapp {
+      background: #21b94b;
+      color: white;
+    }
+
+    .phone {
+      background: #075ca8;
+      color: white;
+    }
+
+    /* ===== الواجهة الرئيسية ===== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(48,168,63,.18), transparent 25%),
+        linear-gradient(135deg, #ffffff 0%, #eaf5fb 100%);
+      padding: 70px 0 90px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: #075ca8;
+      border-radius: 50%;
+      left: -300px;
+      bottom: -350px;
+      opacity: .08;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(42px, 6vw, 75px);
+      color: #075ca8;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .hero-content h2 {
+      color: #1d963d;
+      font-size: clamp(22px, 3vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      color: #45627a;
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
+    .region {
+      display: inline-block;
+      background: #1d963d;
+      color: white;
+      padding: 7px 25px;
+      border-radius: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .hero-buttons .btn {
+      font-size: 18px;
+      padding: 15px 28px;
+    }
+
+    .hero-image {
+      min-height: 450px;
+      border-radius: 35px;
+      background:
+        linear-gradient(rgba(0,77,130,.08), rgba(0,77,130,.08)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+      box-shadow: 0 20px 50px rgba(0,55,100,.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-badge {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      background: rgba(255,255,255,.96);
+      padding: 15px 22px;
+      border-radius: 18px;
+      font-weight: bold;
+      color: #075ca8;
+      box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    }
+
+    /* ===== المميزات ===== */
+
+    .features {
+      margin-top: -35px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+      padding: 22px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .feature-icon {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .feature h3 {
+      color: #075ca8;
+      margin-bottom: 5px;
+    }
+
+    /* ===== الخدمات ===== */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      color: #075ca8;
+    }
+
+    .section-title p {
+      color: #6b7f91;
+      font-size: 18px;
+    }
+
+    .green-line {
+      width: 70px;
+      height: 5px;
+      background: #2ba63e;
+      margin: 12px auto;
+      border-radius: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 18px;
+    }
+
+    .service {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      transition: .3s;
+      border: 1px solid #edf2f5;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    }
+
+    .service-image {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .service:nth-child(1) .service-image {
+      background-image: url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .service:nth-child(2) .service-image {
+      background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .service:nth-child(3) .service-image {
+      background-image: url("https://images.unsplash.com/photo-1587552245472-58e31b2f4d49?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .service:nth-child(4) .service-image {
+      background-image: url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .service:nth-child(5) .service-image {
+      background-image: url("https://images.unsplash.com/photo-1583845112203-454c3b4a2c0c?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .service-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-content h3 {
+      color: #075ca8;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .service-content p {
+      color: #6b7f91;
+      font-size: 14px;
+    }
+
+    /* ===== قسم التواصل ===== */
+
+    .contact-section {
+      background: linear-gradient(135deg, #075ca8, #063d70);
+      color: white;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      font-size: 19px;
+      opacity: .9;
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-buttons .btn {
+      min-width: 230px;
+      font-size: 18px;
+      padding: 15px 25px;
+    }
+
+    /* ===== الفوتر ===== */
+
+    footer {
+      background: #062e50;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #35b74a;
+    }
+
+    footer p {
+      margin-top: 8px;
+      opacity: .8;
+    }
+
+    /* ===== أزرار ثابتة للموبايل ===== */
+
+    .mobile-contact {
+      display: none;
+    }
+
+    /* ===== الموبايل ===== */
+
+    @media (max-width: 1000px) {
+
+      nav {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 350px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      body {
+        padding-bottom: 70px;
+      }
+
+      .navbar {
+        min-height: 70px;
+      }
+
+      .logo-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+      }
+
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .logo-text small {
+        font-size: 9px;
+      }
+
+      .top-buttons .btn {
+        padding: 8px 11px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 45px 0 70px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 45px;
+      }
+
+      .hero-content h2 {
+        font-size: 23px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+      }
+
+      .region {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        min-height: 300px;
+        border-radius: 25px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .service-image {
+        height: 200px;
+      }
+
+      .mobile-contact {
+        position: fixed;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 9999;
+        background: white;
+        padding: 8px;
+        gap: 8px;
+        box-shadow: 0 -5px 20px rgba(0,0,0,.15);
+      }
+
+      .mobile-contact a {
+        padding: 13px 5px;
+        text-align: center;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .mobile-whatsapp {
+        background: #20b94b;
+      }
+
+      .mobile-phone {
+        background: #075ca8;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== الهيدر ===== -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#" class="logo">
+
+        <div class="logo-icon">
+          🏠
+        </div>
+
+        <div class="logo-text">
+          أجيال كلين
+          <small>للتنظيف ومكافحة الحشرات</small>
+        </div>
+
+      </a>
+
+      <nav>
+        <a href="#الرئيسية">الرئيسية</a>
+        <a href="#خدماتنا">خدماتنا</a>
+        <a href="#لماذا-نحن">لماذا نحن</a>
+        <a href="#تواصل">تواصل معنا</a>
+      </nav>
+
+      <div class="top-buttons">
+
+        <a class="btn whatsapp"
+           href="https://wa.me/966559244028"
+           target="_blank">
+          واتساب
+        </a>
+
+        <a class="btn phone"
+           href="tel:0559244028">
+          اتصال
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ===== الرئيسية ===== -->
+
+  <main id="الرئيسية">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <span class="region">
+            نخدم المنطقة الشرقية
+          </span>
+
+          <h1>
+            أجيال كلين
+          </h1>
+
+          <h2>
+            للتنظيف ومكافحة الحشرات
+          </h2>
+
+          <p>
+            نقدم خدمات تنظيف احترافية ومكافحة فعالة للحشرات
+            لنمنحك بيئة نظيفة وآمنة في منزلك أو منشأتك.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a class="btn whatsapp"
+               href="https://wa.me/966559244028"
+               target="_blank">
+              💬 تواصل معنا عبر واتساب
+            </a>
+
+            <a class="btn phone"
+               href="tel:0559244028">
+              📞 اتصل الآن
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <div class="image-badge">
+            ⭐ خدمة احترافية وسريعة
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== المميزات ===== -->
+
+    <section class="features" id="لماذا-نحن">
+
+      <div class="container features-grid">
+
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <h3>أمان وجودة</h3>
+          <p>نهتم بسلامة منزلك ومنشأتك.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🧪</div>
+          <h3>مواد فعالة</h3>
+          <p>حلول مناسبة لخدمات التنظيف والمكافحة.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>استجابة سريعة</h3>
+          <p>تواصل معنا واحجز خدمتك بسهولة.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== الخدمات ===== -->
+
+    <section class="section" id="خدماتنا">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>خدماتنا</h2>
+
+          <div class="green-line"></div>
+
+          <p>
+            حلول متكاملة للتنظيف ومكافحة الحشرات
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <div class="service">
+
+            <div class="service-image"></div>
+
+            <div class="service-content">
+
+              <h3>تنظيف المنازل</h3>
+
+              <p>
+                تنظيف شامل واحترافي لأجزاء المنزل المختلفة.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-image"></div>
+
+            <div class="service-content">
+
+              <h3>تنظيف المنشآت</h3>
+
+              <p>
+                خدمات تنظيف للمكاتب والشركات والمباني التجارية.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-image"></div>
+
+            <div class="service-content">
+
+              <h3>مكافحة الحشرات</h3>
+
+              <p>
+                مكافحة الحشرات والقضاء على مصادر انتشارها.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-image"></div>
+
+            <div class="service-content">
+
+              <h3>تنظيف خزانات المياه</h3>
+
+              <p>
+                تنظيف الخزانات والعناية بنظافة المياه.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-image"></div>
+
+            <div class="service-content">
+
+              <h3>خدمات إضافية</h3>
+
+              <p>
+                خدمات تنظيف متنوعة حسب احتياج العميل.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== التواصل ===== -->
+
+    <section class="contact-section" id="تواصل">
+
+      <div class="container">
+
+        <h2>
+          جاهزين لخدمتك
+        </h2>
+
+        <p>
+          تواصل معنا الآن واحجز خدمة التنظيف أو مكافحة الحشرات
+        </p>
+
+        <div class="contact-buttons">
+
+          <a class="btn whatsapp"
+             href="https://wa.me/966559244028"
+             target="_blank">
+            💬 تواصل عبر واتساب
+          </a>
+
+          <a class="btn phone"
+             href="tel:0559244028">
+            📞 اتصل الآن 0559244028
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ===== الفوتر ===== -->
+
+  <footer>
+
+    <div class="container">
+
+      <h3>
+        <strong>أجيال كلين</strong>
+      </h3>
+
+      <p>
+        للتنظيف ومكافحة الحشرات بالمنطقة الشرقية
+      </p>
+
+      <p>
+        📞 0559244028
+      </p>
+
+      <p>
+        © جميع الحقوق محفوظة - أجيال كلين
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ===== أزرار ثابتة أسفل شاشة الموبايل ===== -->
+
+  <div class="mobile-contact">
+
+    <a class="mobile-whatsapp"
+       href="https://wa.me/966559244028"
+       target="_blank">
+      💬 واتساب
+    </a>
+
+    <a class="mobile-phone"
+       href="tel:0559244028">
+      📞 اتصال
+    </a>
+
+  </div>
+
+
+  <!-- ===== مكان بكسل تيك توك ===== -->
+  <!--
+    لما تبعتلي "معرّف بكسل تيك توك"
+    هركب لك كود البكسل هنا.
+  -->
+
+
+</body>
+</html>
