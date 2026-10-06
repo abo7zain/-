@@ -18,6 +18,24 @@
       background: #ffffff;
     }
 
+    <!-- الأزرار المعلقة -->
+<div class="floating-buttons">
+
+  <a href="https://wa.me/966559244028"
+     target="_blank"
+     rel="noopener"
+     class="floating-whatsapp"
+     aria-label="واتساب">
+    واتساب
+  </a>
+
+  <a href="tel:0559244028"
+     class="floating-phone"
+     aria-label="اتصال">
+    اتصال
+  </a>
+
+</div>
     body {
       font-family: Tahoma, Arial, sans-serif;
       display: flex;
@@ -112,6 +130,67 @@
     min-height: 100vh;
     display: block;
     object-fit: fill;
+  }
+}
+    [12:19 ص، 2026/10/7] جواهرجي السيارات: <!-- الأزرار المعلقة -->
+<div class="floating-buttons">
+
+  <a href="https://wa.me/966559244028"
+     target="_blank"
+     rel="noopener"
+     class="floating-whatsapp"
+     aria-label="واتساب">
+    واتساب
+  </a>
+
+  <a href="tel:0559244028"
+     class="floating-phone"
+     aria-label="اتصال">
+    اتصال
+  </a>
+
+</div>
+[12:21 ص، 2026/10/7] جواهرجي السيارات: /* الأزرار المعلقة أسفل الشاشة */
+.floating-buttons {
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.floating-buttons a {
+  pointer-events: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Tahoma, Arial, sans-serif;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  border: 3px solid white;
+}
+
+.floating-whatsapp {
+  background: #18a83b;
+}
+
+.floating-phone {
+  background: #07569d;
+}
+
+@media (min-width: 601px) {
+  .floating-buttons {
+    display: none;
   }
 }
   </style>
