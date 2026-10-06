@@ -1,405 +1,1022 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>أجيال كلين | تنظيف ومكافحة حشرات</title>
-  <meta name="description" content="أجيال كلين لخدمات التنظيف ومكافحة الحشرات في المنطقة الشرقية">
+<title>أجيال كلين | للتنظيف ومكافحة الحشرات</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Tahoma, Arial, sans-serif;
-    }
+<meta name="description" content="أجيال كلين للتنظيف ومكافحة الحشرات بالمنطقة الشرقية">
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      background: #f7faf9;
-      color: #173b35;
-      line-height: 1.8;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    a {
-      text-decoration: none;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#f7fafc;
+color:#12365a;
+line-height:1.8;
+}
 
-    /* الهيدر */
-    header {
-      background: rgba(255,255,255,0.96);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,.07);
-    }
+a{
+text-decoration:none;
+}
 
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #087f6b;
-      font-size: 24px;
-      font-weight: 900;
-    }
+/* الهيدر */
 
-    .logo-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 14px;
-      background: linear-gradient(135deg,#08a889,#056b5b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-      box-shadow: 0 7px 18px rgba(8,168,137,.25);
-    }
+header{
+background:#fff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
+.navbar{
+min-height:85px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
 
-    .menu a {
-      color: #234740;
-      font-weight: 700;
-      transition: .3s;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:#075ca8;
+font-weight:bold;
+}
 
-    .menu a:hover {
-      color: #08a889;
-    }
+.logo-icon{
+width:58px;
+height:58px;
+border-radius:50%;
+background:linear-gradient(145deg,#087bc1,#2da83d);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:28px;
+}
 
-    .header-buttons {
-      display: flex;
-      gap: 9px;
-    }
+.logo-text{
+font-size:23px;
+line-height:1.2;
+}
 
-    .btn {
-      border-radius: 12px;
-      padding: 11px 17px;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      transition: .3s;
-    }
+.logo-text small{
+display:block;
+color:#24953b;
+font-size:12px;
+margin-top:4px;
+}
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+nav{
+display:flex;
+align-items:center;
+gap:25px;
+}
 
-    .whatsapp {
-      background: #19b968;
-      color: white;
-      box-shadow: 0 7px 18px rgba(25,185,104,.22);
-    }
+nav a{
+color:#12365a;
+font-weight:bold;
+}
 
-    .phone {
-      background: #087f6b;
-      color: white;
-      box-shadow: 0 7px 18px rgba(8,127,107,.20);
-    }
+nav a:hover{
+color:#1fa13a;
+}
 
-    /* البانر الرئيسي */
-    .hero {
-      padding: 65px 0 55px;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(14,170,137,.12), transparent 32%),
-        radial-gradient(circle at 90% 80%, rgba(7,126,107,.10), transparent 35%),
-        linear-gradient(135deg,#f4fbf8,#ffffff);
-    }
+.top-buttons{
+display:flex;
+gap:8px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 45px;
-    }
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+border-radius:30px;
+padding:11px 20px;
+font-weight:bold;
+transition:.3s;
+cursor:pointer;
+}
 
-    .hero-text h1 {
-      font-size: clamp(35px,5vw,58px);
-      line-height: 1.25;
-      color: #123e36;
-      margin-bottom: 20px;
-    }
+.btn:hover{
+transform:translateY(-3px);
+}
 
-    .hero-text h1 span {
-      color: #08a889;
-    }
+.whatsapp{
+background:#21b94b;
+color:white;
+}
 
-    .hero-text p {
-      font-size: 19px;
-      color: #5c716c;
-      margin-bottom: 27px;
-      max-width: 570px;
-    }
+.phone{
+background:#075ca8;
+color:white;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+/* الرئيسية */
 
-    .hero-buttons .btn {
-      padding: 14px 25px;
-      font-size: 16px;
-    }
+.hero{
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 80% 20%,rgba(48,168,63,.18),transparent 25%),
+linear-gradient(135deg,#fff 0%,#eaf5fb 100%);
+padding:70px 0 90px;
+}
 
-    .hero-image {
-      min-height: 390px;
-      border-radius: 35px;
-      overflow: hidden;
-      position: relative;
-      background:
-        linear-gradient(rgba(4,83,70,.10),rgba(4,83,70,.25)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-      box-shadow: 0 25px 55px rgba(17,65,57,.18);
-    }
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:50px;
+}
 
-    .hero-badge {
-      position: absolute;
-      right: 22px;
-      bottom: 22px;
-      background: rgba(255,255,255,.95);
-      border-radius: 18px;
-      padding: 15px 19px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.13);
-      font-weight: 800;
-      color: #14554a;
-    }
+.hero-content h1{
+font-size:clamp(42px,6vw,75px);
+color:#075ca8;
+line-height:1.15;
+margin-bottom:10px;
+font-weight:900;
+}
 
-    /* المميزات */
-    .features {
-      padding: 35px 0;
-    }
+.hero-content h2{
+color:#1d963d;
+font-size:clamp(22px,3vw,34px);
+margin-bottom:20px;
+}
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
+.hero-content p{
+font-size:20px;
+color:#45627a;
+max-width:650px;
+margin-bottom:25px;
+}
 
-    .feature {
-      background: white;
-      border-radius: 20px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(18,61,53,.06);
-      border: 1px solid #e9f1ef;
-    }
+.region{
+display:inline-block;
+background:#1d963d;
+color:white;
+padding:7px 25px;
+border-radius:30px;
+font-size:20px;
+font-weight:bold;
+margin-bottom:20px;
+}
 
-    .feature-icon {
-      font-size: 35px;
-      margin-bottom: 10px;
-    }
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:25px;
+}
 
-    .feature h3 {
-      color: #14554a;
-      margin-bottom: 6px;
-    }
+.hero-buttons .btn{
+font-size:18px;
+padding:15px 28px;
+}
 
-    .feature p {
-      color: #71817d;
-      font-size: 14px;
-    }
+.hero-image{
+min-height:450px;
+border-radius:35px;
+background:
+linear-gradient(rgba(0,77,130,.08),rgba(0,77,130,.08)),
+url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85")
+center/cover;
+box-shadow:0 20px 50px rgba(0,55,100,.18);
+position:relative;
+overflow:hidden;
+}
 
-    /* الأقسام */
-    section {
-      padding: 70px 0;
-    }
+.image-badge{
+position:absolute;
+bottom:25px;
+right:25px;
+background:rgba(255,255,255,.96);
+padding:15px 22px;
+border-radius:18px;
+font-weight:bold;
+color:#075ca8;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 42px;
-    }
+/* المميزات */
 
-    .section-title span {
-      color: #08a889;
-      font-weight: 900;
-      display: block;
-      margin-bottom: 5px;
-    }
+.features{
+margin-top:-35px;
+position:relative;
+z-index:10;
+}
 
-    .section-title h2 {
-      font-size: 36px;
-      color: #123e36;
-    }
+.features-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
 
-    .section-title p {
-      color: #71817d;
-      margin-top: 8px;
-    }
+.feature{
+background:white;
+padding:22px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
 
-    /* الخدمات */
-    .services {
-      background: #eef7f4;
-    }
+.feature-icon{
+font-size:35px;
+margin-bottom:8px;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 22px;
-    }
+.feature h3{
+color:#075ca8;
+margin-bottom:5px;
+}
 
-    .service {
-      background: white;
-      border-radius: 22px;
-      padding: 28px;
-      border: 1px solid #e4efeb;
-      box-shadow: 0 9px 30px rgba(18,61,53,.06);
-      transition: .3s;
-    }
+/* الخدمات */
 
-    .service:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(18,61,53,.11);
-    }
+.section{
+padding:85px 0;
+}
 
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 17px;
-      background: #e2f7f1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      margin-bottom: 17px;
-    }
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
 
-    .service h3 {
-      color: #14554a;
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
+.section-title h2{
+font-size:42px;
+color:#075ca8;
+}
 
-    .service p {
-      color: #71817d;
-      font-size: 15px;
-    }
+.section-title p{
+color:#6b7f91;
+font-size:18px;
+}
 
-    /* من نحن */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+.green-line{
+width:70px;
+height:5px;
+background:#2ba63e;
+margin:12px auto;
+border-radius:10px;
+}
 
-    .about-box {
-      background: white;
-      border-radius: 28px;
-      padding: 35px;
-      box-shadow: 0 12px 35px rgba(18,61,53,.07);
-    }
+.services-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
 
-    .about-box h2 {
-      font-size: 34px;
-      color: #123e36;
-      margin-bottom: 15px;
-    }
+.service{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+border:1px solid #edf2f5;
+}
 
-    .about-box p {
-      color: #687b76;
-      margin-bottom: 15px;
-    }
+.service:hover{
+transform:translateY(-8px);
+}
 
-    .check {
-      margin: 10px 0;
-      font-weight: 700;
-      color: #14554a;
-    }
+.service-image{
+height:160px;
+background-size:cover;
+background-position:center;
+}
 
-    .about-image {
-      min-height: 360px;
-      border-radius: 30px;
-      background:
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
-      box-shadow: 0 20px 45px rgba(18,61,53,.15);
-    }
+.service:nth-child(1) .service-image{
+background-image:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80");
+}
 
-    /* التواصل */
-    .contact {
-      background: linear-gradient(135deg,#087f6b,#075e51);
-      color: white;
-    }
+.service:nth-child(2) .service-image{
+background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80");
+}
 
-    .contact-box {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
+.service:nth-child(3) .service-image{
+background-image:url("https://images.unsplash.com/photo-1587552245472-58e31b2f4d49?auto=format&fit=crop&w=700&q=80");
+}
 
-    .contact-box h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
+.service:nth-child(4) .service-image{
+background-image:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80");
+}
 
-    .contact-box p {
-      opacity: .9;
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
+.service:nth-child(5) .service-image{
+background-image:url("https://images.unsplash.com/photo-1583845112203-454c3b4a2c0c?auto=format&fit=crop&w=700&q=80");
+}
 
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.service-content{
+padding:20px;
+text-align:center;
+}
 
-    .contact-buttons .btn {
-      background: white;
-      color: #075e51;
-      min-width: 190px;
-      padding: 15px 20px;
-    }
+.service-content h3{
+color:#075ca8;
+font-size:20px;
+margin-bottom:8px;
+}
 
-    .contact-buttons .btn.whatsapp {
-      background: #19b968;
-      color: white;
-    }
+.service-content p{
+color:#6b7f91;
+font-size:14px;
+}
 
-    /* الفوتر */
-    footer {
-      background: #083b34;
-      color: white;
-      text-align: center;
-      padding: 25px 15px 90px;
-    }
+/* التواصل */
 
-    footer p {
-      opacity: .85;
-      font-size: 14px;
-    }
+.contact-section{
+background:linear-gradient(135deg,#075ca8,#063d70);
+color:white;
+padding:70px 0;
+text-align:center;
+}
 
-    /* أزرار الهاتف */
-    .mobile-actions {
-      position: fixed;
-      bottom: 12px;
-      left: 12px;
-      right: 12px;
-      display: none;
+.contact-section h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.contact-section p{
+font-size:19px;
+opacity:.9;
+margin-bottom:25px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.contact-buttons .btn{
+min-width:230px;
+font-size:18px;
+padding:15px 25px;
+}
+
+/* الفوتر */
+
+footer{
+background:#062e50;
+color:white;
+padding:30px 0;
+text-align:center;
+}
+
+footer strong{
+color:#35b74a;
+}
+
+footer p{
+margin-top:8px;
+opacity:.8;
+}
+
+/* أزرار الموبايل */
+
+.mobile-contact{
+display:none;
+}
+
+/* الشاشات المتوسطة */
+
+@media(max-width:1000px){
+
+nav{
+display:none;
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero-image{
+min-height:350px;
+}
+
+}
+
+/* الموبايل */
+
+@media(max-width:650px){
+
+body{
+padding-bottom:70px;
+}
+
+.navbar{
+min-height:70px;
+}
+
+.logo-icon{
+width:45px;
+height:45px;
+font-size:22px;
+}
+
+.logo-text{
+font-size:18px;
+}
+
+.logo-text small{
+font-size:9px;
+}
+
+.top-buttons .btn{
+padding:8px 11px;
+font-size:12px;
+}
+
+.hero{
+padding:45px 0 70px;
+}
+
+.hero-content{
+text-align:center;
+}
+
+.hero-content h1{
+font-size:45px;
+}
+
+.hero-content h2{
+font-size:23px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.region{
+font-size:16px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-buttons .btn{
+width:100%;
+}
+
+.hero-image{
+min-height:300px;
+border-radius:25px;
+}
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:60px 0;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+.service-image{
+height:200px;
+}
+
+.mobile-contact{
+position:fixed;
+display:grid;
+grid-template-columns:1fr 1fr;
+bottom:0;
+right:0;
+left:0;
+z-index:9999;
+background:white;
+padding:8px;
+gap:8px;
+box-shadow:0 -5px 20px rgba(0,0,0,.15);
+}
+
+.mobile-contact a{
+padding:13px 5px;
+text-align:center;
+border-radius:30px;
+color:white;
+font-weight:bold;
+}
+
+.mobile-whatsapp{
+background:#20b94b;
+}
+
+.mobile-phone{
+background:#075ca8;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- الهيدر -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+
+<div class="logo-icon">
+🏠
+</div>
+
+<div class="logo-text">
+
+أجيال كلين
+
+<small>
+للتنظيف ومكافحة الحشرات
+</small>
+
+</div>
+
+</a>
+
+
+<nav>
+
+<a href="#الرئيسية">الرئيسية</a>
+
+<a href="#خدماتنا">خدماتنا</a>
+
+<a href="#لماذا-نحن">لماذا نحن</a>
+
+<a href="#تواصل">تواصل معنا</a>
+
+</nav>
+
+
+<div class="top-buttons">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/966559244028"
+target="_blank">
+
+واتساب
+
+</a>
+
+
+<a
+class="btn phone"
+href="tel:0559244028">
+
+اتصال
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- الرئيسية -->
+
+<main id="الرئيسية">
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div class="hero-content">
+
+<span class="region">
+
+نخدم المنطقة الشرقية
+
+</span>
+
+
+<h1>
+
+أجيال كلين
+
+</h1>
+
+
+<h2>
+
+للتنظيف ومكافحة الحشرات
+
+</h2>
+
+
+<p>
+
+نقدم خدمات تنظيف احترافية ومكافحة فعالة للحشرات
+لنمنحك بيئة نظيفة وآمنة في منزلك أو منشأتك.
+
+</p>
+
+
+<div class="hero-buttons">
+
+
+<a
+class="btn whatsapp"
+href="https://wa.me/966559244028"
+target="_blank">
+
+💬 تواصل معنا عبر واتساب
+
+</a>
+
+
+<a
+class="btn phone"
+href="tel:0559244028">
+
+📞 اتصل الآن
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<div class="hero-image">
+
+<div class="image-badge">
+
+⭐ خدمة احترافية وسريعة
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- المميزات -->
+
+<section class="features" id="لماذا-نحن">
+
+<div class="container features-grid">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🛡️
+</div>
+
+<h3>
+أمان وجودة
+</h3>
+
+<p>
+نهتم بسلامة منزلك ومنشأتك.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🧪
+</div>
+
+<h3>
+مواد فعالة
+</h3>
+
+<p>
+حلول مناسبة لخدمات التنظيف والمكافحة.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+استجابة سريعة
+</h3>
+
+<p>
+تواصل معنا واحجز خدمتك بسهولة.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- الخدمات -->
+
+<section class="section" id="خدماتنا">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+خدماتنا
+</h2>
+
+<div class="green-line"></div>
+
+<p>
+حلول متكاملة للتنظيف ومكافحة الحشرات
+</p>
+
+</div>
+
+
+
+<div class="services-grid">
+
+
+<!-- الخدمة الأولى -->
+
+<div class="service">
+
+<div class="service-image"></div>
+
+<div class="service-content">
+
+<h3>
+تنظيف المنازل
+</h3>
+
+<p>
+تنظيف شامل واحترافي لأجزاء المنزل المختلفة.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- الخدمة الثانية -->
+
+<div class="service">
+
+<div class="service-image"></div>
+
+<div class="service-content">
+
+<h3>
+تنظيف المنشآت
+</h3>
+
+<p>
+خدمات تنظيف للمكاتب والشركات والمباني التجارية.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- الخدمة الثالثة -->
+
+<div class="service">
+
+<div class="service-image"></div>
+
+<div class="service-content">
+
+<h3>
+مكافحة الحشرات
+</h3>
+
+<p>
+مكافحة الحشرات والقضاء على مصادر انتشارها.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- الخدمة الرابعة -->
+
+<div class="service">
+
+<div class="service-image"></div>
+
+<div class="service-content">
+
+<h3>
+تنظيف خزانات المياه
+</h3>
+
+<p>
+تنظيف الخزانات والعناية بنظافة المياه.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- الخدمة الخامسة -->
+
+<div class="service">
+
+<div class="service-image"></div>
+
+<div class="service-content">
+
+<h3>
+خدمات إضافية
+</h3>
+
+<p>
+خدمات تنظيف متنوعة حسب احتياج العميل.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- التواصل -->
+
+<section class="contact-section" id="تواصل">
+
+<div class="container">
+
+<h2>
+جاهزين لخدمتك
+</h2>
+
+<p>
+تواصل معنا الآن واحجز خدمة التنظيف أو مكافحة الحشرات
+</p>
+
+
+<div class="contact-buttons">
+
+
+<a
+class="btn whatsapp"
+href="https://wa.me/966559244028"
+target="_blank">
+
+💬 تواصل عبر واتساب
+
+</a>
+
+
+<a
+class="btn phone"
+href="tel:0559244028">
+
+📞 اتصل الآن 0559244028
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- الفوتر -->
+
+<footer>
+
+<div class="container">
+
+<h3>
+
+<strong>
+أجيال كلين
+</strong>
+
+</h3>
+
+
+<p>
+للتنظيف ومكافحة الحشرات بالمنطقة الشرقية
+</p>
+
+
+<p>
+📞 0559244028
+</p>
+
+
+<p>
+© جميع الحقوق محفوظة - أجيال كلين
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- أزرار ثابتة أسفل شاشة الموبايل -->
+
+<div class="mobile-contact">
+
+
+<a
+class="mobile-whatsapp"
+href="https://wa.me/966559244028"
+target="_blank">
+
+💬 واتساب
+
+</a>
+
+
+<a
+class="mobile-phone"
+href="tel:0559244028">
+
+📞 اتصال
+
+</a>
+
+
+</div>
+
+
+
+</body>
+</html>
